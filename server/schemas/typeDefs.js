@@ -5,7 +5,8 @@ const typeDefs = gql`
         _id: ID!
         username: String!
         email: String!
-        bookCount: [Book]
+        bookCount: Int
+        savedBooks: [Book]!
     }
 
     type Book {
@@ -33,6 +34,5 @@ const typeDefs = gql`
         removeBook(bookId: String!): User
     }
 `;
-//TODO Password passing??  No bueno
 
 module.exports = typeDefs;
